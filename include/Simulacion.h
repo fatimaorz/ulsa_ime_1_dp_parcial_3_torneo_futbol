@@ -15,4 +15,39 @@ const int ANCHO_NUM = 4;
 const int ANCHO_EQUIPO = 17;
 const int ANCHO_MARCADOR = 10;
 
+inline void generarPartidos(Partido partidos[], int totalEquipos) {
+    int k = 0;
+    for (int i = 0; i < totalEquipos; i++) {
+        for (int j = i + 1; j < totalEquipos; j++) {
+            partidos[k].local = i;
+            partidos[k].visitante = j;
+            partidos[k].golesLocal = 0;
+            partidos[k].golesVisitante = 0;
+            k++;
+        }
+    }
+}
+
+
+inline void asignarMarcadores(Partido partidos[], int totalPartidos, bool modoPrueba) {
+    for (int k = 0; k < totalPartidos; k++) {
+        if (modoPrueba) {
+            partidos[k].golesLocal = GOLES_PRUEBA[k][COL_LOCAL];
+            partidos[k].golesVisitante = GOLES_PRUEBA[k][COL_VISITANTE];
+        } else {
+            partidos[k].golesLocal = numeroAleatorio();
+            partidos[k].golesVisitante = numeroAleatorio();
+        }
+    }
+}
+
+
+inline bool pedirModoSimulacion() {
+    while (true) {
+        int opcion = leerEntero("Modo de simulacion (1 = aleatorio, 2 = prueba): ");
+        if (opcion == OPCION_ALEATORIO) return false;
+        if (opcion == OPCION_PRUEBA) return true;
+        std::cout << "Opcion no valida. Elige 1 o 2.\n";
+    }
+}
 
