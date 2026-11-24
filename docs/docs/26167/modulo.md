@@ -2,8 +2,8 @@
 
 **Nombre:** Daniel Miranda Ferreira 
 **Matrícula:** 26167
-**Módulo:** [Inserta aquí tu respuesta]  
-**Archivo de código:** [Inserta aquí tu respuesta]
+**Módulo:** [6]  
+**Archivo de código:** [matriz.h]
 
 ## 2. Propósito
 
