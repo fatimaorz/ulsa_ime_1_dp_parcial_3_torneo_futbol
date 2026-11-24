@@ -12,7 +12,8 @@
 #include "torneo.h"
 #include "utilerias.h"
 #include "torneo.h"
-#include "tabla.h"    
+#include "tabla.h"  
+#include "consultas.h"  
 
 const int OPC_REGISTRAR = 1;
 const int OPC_MOSTRAR_EQUIPOS = 2;
