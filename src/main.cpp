@@ -16,10 +16,15 @@
 #include "torneo.h"
 
 // TODO: incluyan aqui el archivo .h de cada modulo.
+#include "tabla.h"     // Modulo 3: tabla de posiciones
 
 int main() {
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
+
+    // Modulo 3: al simular el torneo (opcion "Simular torneo"), justo
+    //           despues de generar los partidos, se calcula la tabla una vez:
+    //           calcularTabla(equipos, MAX_EQUIPOS, partidos, TOTAL_PARTIDOS);
 
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.

@@ -8,7 +8,7 @@
 | --- | --- | --- | --- | --- |
 | 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Registro de equipos |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Simulación de partidos |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Tabla de posiciones |
+| 3 | 26113 | Andrés Galindo Dávila | andresgalindod-rgb | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
 | 5 | [Inserta aquí tu respuesta] | 26100 | Regina Murillo Arellano | Consultas |
 | 6 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
@@ -45,7 +45,21 @@ Para ejecutar en Windows:
 
 Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, qué operaciones tiene y por qué.
 
-[Inserta aquí tu respuesta]
+**TDA `Equipo`** (`include/torneo.h`)
+
+- **Datos:** `nombre` y sus estadísticas del torneo: `jugados`, `ganados`, `empatados`, `perdidos`, `golesFavor`, `golesContra` y `puntos`. Las estadísticas inician en 0.
+- **Operaciones:**
+  - Registrar equipo (`registrarEquipo`, módulo 1).
+  - Reiniciar estadísticas (`reiniciarEstadisticas`, módulo 3).
+  - Registrar resultado (`registrarResultado`, módulo 3): suma un partido jugado, sus goles y sus puntos.
+- **Por qué:** todos los datos de un equipo viajan juntos en un solo registro, sin arreglos paralelos. Los equipos se guardan en un arreglo de `Equipo` de tamaño `MAX_EQUIPOS`, en orden de registro.
+
+**TDA `Partido`** (`include/torneo.h`)
+
+- **Datos:** `local` y `visitante` (posición de cada equipo en el arreglo de equipos, de 0 a `MAX_EQUIPOS - 1`), `golesLocal` y `golesVisitante`.
+- **Operaciones:**
+  - Aplicar partido a la tabla (`aplicarPartido`, módulo 3): registra el resultado en los dos equipos, cada uno desde su lado del marcador.
+- **Por qué:** guardar la posición del equipo, y no su nombre, permite llegar directo al equipo con `equipos[partido.local]` sin buscarlo. Los partidos se guardan en un arreglo de `Partido` de tamaño `TOTAL_PARTIDOS`.
 
 ## 5. Reglas del programa
 
@@ -111,7 +125,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | --- | --- | --- |
 | 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 3 | [docs/docs/26113/modulo.md](docs/docs/26113/modulo.md) | [docs/mejoras/docs/mejoras/26113/mejora.md](docs/mejoras/docs/mejoras/26113/mejora.md) |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 
