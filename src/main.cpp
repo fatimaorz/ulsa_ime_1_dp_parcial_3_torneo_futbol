@@ -13,7 +13,8 @@
 #include <iostream>
 #include "utilerias.h"
 #include "torneo.h"
-#include "tabla.h"    
+#include "tabla.h"   
+#include "consultas.h" 
 
 // ---------- Constantes del menu ----------
 const int OPC_REGISTRAR = 1;
