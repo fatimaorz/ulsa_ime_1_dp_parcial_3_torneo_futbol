@@ -11,41 +11,38 @@
 // Lean PROYECTO.md antes de escribir codigo.
 
 #include <iostream>
-
 #include "utilerias.h"
 #include "torneo.h"
+#include "tabla.h"   
+#include "consultas.h" 
 
-// TODO: incluyan aqui el archivo .h de cada modulo.
-#include "tabla.h"     // Modulo 3: tabla de posiciones
+// ---------- Constantes del menu ----------
+const int OPC_REGISTRAR = 1;
+const int OPC_MOSTRAR_EQUIPOS = 2;
+const int OPC_SIMULAR = 3;
+const int OPC_RESULTADOS = 4;
+const int OPC_TABLA = 5;
+const int OPC_CAMPEON = 6;
+const int OPC_CONSULTAR = 7;
+const int OPC_MATRIZ = 8;
+const int OPC_SALIR = 9;
 
+// Modos de simulacion
+const int MODO_ALEATORIO = 1;
+const int MODO_PRUEBA = 2;
+
+void mostrarMenu() {
+    std::cout << "\n1. Registrar equipo\n"
+              << "2. Mostrar equipos\n"
+              << "3. Simular torneo\n"
+              << "4. Mostrar resultados\n"
+              << "5. Mostrar tabla de posiciones\n"
+              << "6. Mostrar campeon\n"
+              << "7. Consultar equipo\n"
+              << "8. Mostrar matriz de enfrentamientos\n"
+              << "9. Salir\n";
+}
 int main() {
-    // TODO: declaren aqui los datos del torneo.
-    //       No usen variables globales.
-
-    // Modulo 3: al simular el torneo (opcion "Simular torneo"), justo
-    //           despues de generar los partidos, se calcula la tabla una vez:
-    //           calcularTabla(equipos, MAX_EQUIPOS, partidos, TOTAL_PARTIDOS);
-
-    // TODO: menu que se repite hasta elegir "Salir".
-    //       Una opcion que no existe se rechaza con un mensaje.
-
-    // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
-    //
-    // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
-    // Paso 2: intentar simular sin los 6 equipos (rechazo).
-    // Paso 3: registrar 6 equipos. Durante el registro, teclear un nombre
-    //         repetido con otras mayusculas o minusculas, uno de menos de
-    //         3 caracteres, uno de mas de 15 y uno con acento o enie
-    //         (rechazos).
-    // Paso 4: intentar registrar un equipo mas (rechazo por lista llena).
-    // Paso 5: simular en modo de prueba.
-    // Paso 6: intentar simular de nuevo (rechazo).
-    // Paso 7: mostrar equipos, resultados, tabla y matriz.
-    // Paso 8: mostrar al campeon y elegirlo entre los empatados.
-    // Paso 9: consultar un equipo existente y uno inexistente (rechazo).
-    // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
-    // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
-    //          resultados, tabla y campeon.
-
+ 
     return 0;
 }
