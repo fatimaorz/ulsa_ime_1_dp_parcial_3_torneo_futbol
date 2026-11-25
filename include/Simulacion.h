@@ -51,3 +51,25 @@ inline bool pedirModoSimulacion() {
     }
 }
 
+inline void simularPartidos(int totalEquipos, Partido partidos[], int& totalPartidos) {
+    if (totalEquipos < MAX_EQUIPOS) {
+        std::cout << "Faltan equipos para simular el torneo.\n";
+        return;
+    }
+    if (totalPartidos > 0) {
+        std::cout << "El torneo ya fue simulado.\n";
+        return;
+    }
+    bool modoPrueba = pedirModoSimulacion();
+    generarPartidos(partidos, totalEquipos);
+    totalPartidos = TOTAL_PARTIDOS;
+    asignarMarcadores(partidos, totalPartidos, modoPrueba);
+    std::cout << "Torneo simulado correctamente.\n";
+}
+
+
+inline void mostrarResultados(const Equipo equipos[], const Partido partidos[], int totalPartidos) {
+    if (totalPartidos == 0) {
+        std::cout << "Primero simula el torneo.\n";
+        return;
+    }
