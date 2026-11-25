@@ -45,7 +45,7 @@ mostrarCampeon(const Equipo equipos[], int total)	Arreglo constante y total por 
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+Los temas son el ordenamiento que se demuestra en "ordenarTabla", intercambio de posiciones que se demuestra con el "intercambiar" y los apuntadores son "Intercambiar" y "ordenarTabla".
 
 **¿Qué ciclos usaste y por qué esos?**
 
