@@ -173,47 +173,7 @@ void consultarEquipo(const Equipo equipos[]) {
     std::cout << "No se encontro el equipo.\n";
 }
 
-void mostrarMatriz(const Equipo equipos[], const Partido partidos[]) {
-    std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n";
-
-    std::cout << std::setw(12) << "";
-    for (int i = 0; i < MAX_EQUIPOS; i++) {
-        std::cout << std::setw(8) << equipos[i].nombre;
-    }
-    std::cout << '\n';
-
-    for (int i = 0; i < MAX_EQUIPOS; i++) {
-        std::cout << std::setw(12) << equipos[i].nombre;
-        for (int j = 0; j < MAX_EQUIPOS; j++) {
-            if (i == j) {
-                std::cout << std::setw(8) << "--";
-            } else {
-                bool encontrado = false;
-                for (int k = 0; k < TOTAL_PARTIDOS; k++) {
-                    const Partido& partido = partidos[k];
-                    if (partido.local == i && partido.visitante == j) {
-                        std::cout << std::setw(8)
-                                  << (std::to_string(partido.golesLocal) + "-" +
-                                      std::to_string(partido.golesVisitante));
-                        encontrado = true;
-                        break;
-                    }
-                    if (partido.local == j && partido.visitante == i) {
-                        std::cout << std::setw(8)
-                                  << (std::to_string(partido.golesVisitante) + "-" +
-                                      std::to_string(partido.golesLocal));
-                        encontrado = true;
-                        break;
-                    }
-                }
-                if (!encontrado) {
-                    std::cout << std::setw(8) << "--";
-                }
-            }
-        }
-        std::cout << '\n';
-    }
-}
+   
 
 int main() {
     Equipo equipos[MAX_EQUIPOS];
