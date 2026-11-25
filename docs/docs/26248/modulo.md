@@ -165,8 +165,7 @@ Incluye casos normales y casos límite.
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
-
+Aprendí que no es tan dificil crear un programa utilizando los apuntadores incluso mas fácil a como intentamos hacer los programas al inicio del semestre 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+creo que cambiaría algo dentro del std::swap para intentar que se pueda hacer de una manera mas eficiente.
