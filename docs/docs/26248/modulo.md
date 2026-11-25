@@ -62,7 +62,7 @@ utilice torneo.h, tabla.h y utelerias.h
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+Mi módulo rechaza una opción de campeón fuera de rango y muestra 'Opcion no valida', volviendo a preguntar hasta recibir una válida
 
 ## 5. Receta
 
