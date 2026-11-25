@@ -22,8 +22,13 @@ mi modulo recive los puntos que hizo el equipo en el torneo, que son los resulta
 Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
+use intercambiar(Equipo* a, Equipo* b): esto hace que se cambie el equipo de posición si tiene menos puntos que el equipo al lado de el.
+ordenarTabla(Equipo equipos[], int total): este llama al apuntador intercambiar si es que la lista esta en orden equivocado.
+mostrarTabla(const Equipo equipos[], int total): esto imprime la tabla de posiciones, el nombre y las estadisticas del equipo.
+contarEmpatados(const Equipo equipos[], int total): en caso de que haya un empate esto hace que se tenga que elegir entre los 2 equipos para ver cual es el ganador.
+mostrarCampeon(const Equipo equipos[], int total): anuncia el campeon con sus puntos.
 
-[Inserta aquí tu respuesta]
+
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
