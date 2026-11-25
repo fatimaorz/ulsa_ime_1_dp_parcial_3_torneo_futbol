@@ -65,7 +65,16 @@ Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, q
 
 Escriban las decisiones que el equipo tomó y que el cálculo a mano necesita. Por ejemplo: cómo se obtiene la abreviatura y qué pasa si dos se repiten.
 
-[Inserta aquí tu respuesta]
+[Matriz de enfrentamientos:
+
+- La matriz usa las posiciones de los equipos en el arreglo para relacionar los resultados de cada partido.
+- Cada celda muestra primero los goles del equipo de la fila y después los goles del equipo de la columna.
+- La diagonal principal se representa con `---`, porque un equipo no juega contra sí mismo.
+- Las abreviaturas se forman tomando los primeros caracteres del nombre del equipo y convirtiéndolos a mayúsculas.
+- La matriz se construyo usando los resultados guardados en el arreglo de partidos.
+- El mejor ataque corresponde al equipo o equipos con más goles a favor.
+- La mejor defensa corresponde al equipo o equipos con menos goles en contra.
+- Si hay empate en mejor ataque o mejor defensa, se muestran todos los equipos empatados.]
 
 ## 6. Equipos del escenario
 
