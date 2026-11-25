@@ -48,32 +48,100 @@ mostrarCampeon(const Equipo equipos[], int total)	Arreglo constante y total por 
 Los temas son el ordenamiento que se demuestra en "ordenarTabla", intercambio de posiciones que se demuestra con el "intercambiar" y los apuntadores son "Intercambiar" y "ordenarTabla".
 
 **¿Qué ciclos usaste y por qué esos?**
+use for, do y while, porque para for para recorrer arreglos y hacer 3 operaciones en una sola linea de codigo como esto "for (int i = 0; i < total; i++) { ... }" y el do-while para hacer la opción de elegir el campeon así "while (opcion < 1 || opcion > empatados) 
+    std::cout << "Elige al campeon: ";
+    std::cin >> opcion;"
 
-[Inserta aquí tu respuesta]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
-
+mi modulo no declara en si constantes sino que las toma de los otros archivos .h como MAX_EQUIPOS de torneo.h
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+utilice torneo.h, tabla.h y utelerias.h
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+Mi módulo rechaza una opción de campeón fuera de rango y muestra 'Opcion no valida', volviendo a preguntar hasta recibir una válida
 
 ## 5. Receta
 
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+MODULO 4: CLASIFICACION Y CAMPEON
+
+INTERCAMBIAR(a, b)          // a y b son apuntadores a Equipo
+    guardar en temporal el equipo al que apunta a
+    copiar en a el equipo al que apunta b
+    copiar en b el equipo guardado en temporal
+
+ORDENAR_TABLA(equipos, total)
+    PARA i DESDE 0 HASTA total - 2
+        actual = apuntador al primer equipo
+        MIENTRAS actual esté antes de la posición (total - 1 - i)
+            siguiente = apuntador al equipo que está después de actual
+            SI puntos de actual < puntos de siguiente
+                INTERCAMBIAR(actual, siguiente)
+            FIN SI
+            avanzar actual al siguiente equipo
+        FIN MIENTRAS
+    FIN PARA
+
+MOSTRAR_TABLA(equipos, total)
+    imprimir título y encabezados (#, EQUIPO, PJ, PG, PE, PP, GF, GC, PTS)
+    PARA i DESDE 0 HASTA total - 1
+        imprimir i + 1, nombre y estadísticas del equipo i
+    FIN PARA
+
+CONTAR_EMPATADOS(equipos, total)
+    cantidad = 0
+    PARA i DESDE 0 HASTA total - 1
+        SI puntos del equipo i == puntos del equipo 0
+            cantidad = cantidad + 1
+        FIN SI
+    FIN PARA
+    DEVOLVER cantidad
+
+ELEGIR_CAMPEON(equipos, empatados)
+    imprimir "Hay empate en el primer lugar"
+    PARA i DESDE 0 HASTA empatados - 1
+        imprimir i + 1 y el nombre del equipo i
+    FIN PARA
+    REPETIR
+        pedir opcion al usuario
+        SI opcion < 1 O opcion > empatados
+            imprimir "Opcion no valida"
+        FIN SI
+    HASTA QUE opcion esté entre 1 y empatados
+    DEVOLVER opcion - 1
+
+MOSTRAR_CAMPEON(equipos, total)
+    SI total <= 0
+        imprimir "No hay equipos para determinar un campeon"
+        TERMINAR
+    FIN SI
+    empatados = CONTAR_EMPATADOS(equipos, total)
+    campeon = 0
+    SI empatados > 1
+        campeon = ELEGIR_CAMPEON(equipos, empatados)
+    FIN SI
+    imprimir nombre y puntos del equipo en la posición campeon
+
+FLUJO EN EL PROGRAMA PRINCIPAL (opciones 5 y 6)
+    SI el torneo no se ha simulado
+        imprimir "Primero debes simular el torneo"
+    SINO
+        copiar los equipos a un arreglo ordenados
+        ORDENAR_TABLA(ordenados, MAX_EQUIPOS)
+        SI opcion es la tabla: MOSTRAR_TABLA(ordenados, MAX_EQUIPOS)
+        SI opcion es el campeon: MOSTRAR_CAMPEON(ordenados, MAX_EQUIPOS)
+    FIN SI
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+No la probe a mano
 
 ## 6. Pruebas
 
@@ -97,8 +165,7 @@ Incluye casos normales y casos límite.
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
-
+Aprendí que no es tan dificil crear un programa utilizando los apuntadores incluso mas fácil a como intentamos hacer los programas al inicio del semestre 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+creo que cambiaría algo dentro del std::swap para intentar que se pueda hacer de una manera mas eficiente.

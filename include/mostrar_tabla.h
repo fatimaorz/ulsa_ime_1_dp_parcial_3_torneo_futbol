@@ -39,12 +39,13 @@ int elegirCampeon(const Equipo equipos[], int empatados) {
     }
 
     int opcion;
-    do {
-        std::cout << "Elige al campeon: ";
-        std::cin >> opcion;
-    } while (opcion < 1 || opcion > empatados);
-
-    return opcion - 1;
+do {
+    opcion = leerEntero("Elige al campeon: ");
+    if (opcion < 1 || opcion > empatados) {
+        std::cout << "Opcion no valida. Elige un numero entre 1 y "
+                  << empatados << ".\n";
+    }
+} while (opcion < 1 || opcion > empatados);
 }
 
 void mostrarCampeon(const Equipo equipos[], int total) {
