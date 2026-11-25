@@ -27,31 +27,40 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[Inserta aquí tu respuesta]
+buscar equipo en esta función busca al equipo comparando los nombres, si tiene mayusculas o minisculas. Si encuentra el equipo regresa su información si no lo enceuntra regresa nullptr
+
+consultar equipo en esta función busca al equipo, muestra su ficha, tambien recorre los partidos, sus rivales, etc.
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+arreglos para equipos y partidos para ver toda la información 
+apuntadores para acceder a los elementos de los arreglos sin modificarlos 
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+buscarEquipo - localizar el equipo 
+consultarEquipo - recorre los partidos
+nullptr para cuando no se encuentre un equipo, regresa 
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+for, if, if else, else 
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+ANCHO_RIVAL y ANCHO_MARCADOR - ayuda a establecer los espacios al momento de imprimir la tabla para que no se empalme 
+
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+leerCadena - para el nombre del equipo 
+aMinusculas - para comparar los nombres, sin importar minusculas y mayusculas 
+to_string - los goles a texto 
+setw - para acomodar las columnas 
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+Equipo no encontrado - cuando se busca el equipo y no esta nullptr regresa y muestra mensaje de que no esta 
 
 ## 5. Receta
 
@@ -111,7 +120,9 @@ FUNCION consultarEquipo(equipos, partidos)
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+Si lo revise con los datos de prueba para comparar y como localizar el equipo, verificar que los datos coincidan y la ficha esta correcta 
+Tambien la parte del equipo que no existe para que indique que no esta 
+Al igual que la parte de mayusculas y minisculas, para que aun asi mostrara la ficha del equipo 
 
 ## 6. Pruebas
 
@@ -119,24 +130,24 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | Consultar equipo existente | Leones | Mostrar la ficha completa de Leones| Mostro su ficha completa sin errores |
+| 2 | Consultar un equipo que no existe | Muffy | Mostrar equipo no encontrado: Muffy| SE muestra el mensaje de equipo no encontrado |
+| 3 | Buscar equipo con mayusculas y minusculas | LeONes | Encontrar el equipo sin importar como se escriba | Si se encuentra el equipo |
 
 ## 7. Bitácora de dudas y errores
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | No sabía bien como se utilizaba nullptr| Regrese a notas de clase, investigue y pregunte |
+| 2 | Tuve problemas al integrar al main, ya que la función mostraba error al imprimir la ficha  | modificar el main, preguntar y borrar elementos del main, para que la ficha saliera bien  |
+| 3 | Se me dificulto mas la integración de consultas al main | consultando mis errores |
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+A usar de mejor manera las constantes, nullptr
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+Dedicar más tiempo para corregir los errores al momento de compilar 
