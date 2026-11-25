@@ -22,5 +22,15 @@ void ordenarTabla(Equipo equipos[], int total) {
     }
 }
 
+int contarEmpatados(const Equipo equipos[], int total) {
+    int cantidad = 0; 
+    for (int i = 0; i < total; i++) {
+        if (equipos[i].puntos == equipos[0].puntos) {
+            cantidad++;
+        }
+    }
+    return cantidad;
+}
+
 
 
