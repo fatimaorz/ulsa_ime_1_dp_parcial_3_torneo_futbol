@@ -1,11 +1,11 @@
 **Matrícula:** 26248 
-**Título de la propuesta:** [Inserta aquí tu respuesta]
+**Título de la propuesta:** Mejora en desición en caso de empate
 
 ## 1. Impacto
 
 ¿Es una mejora o una corrección? ¿Qué problema resuelve o qué agrega, y a quién beneficia?
 
-[Inserta aquí tu respuesta]
+es una mejora, resuelve el proceso de que la persona tenga que decidir manualmente al ganador creo que estaría mejor que el programa pueda decidir automaticamente en caso de un empate tomando en cuenta diferentes variables del equipo durante el torneo como goles o cantidad de partidos ganados.
 
 ## 2. Qué implica en el diseño
 
