@@ -12,6 +12,7 @@
 #include "torneo.h"
 #include "utilerias.h"
 #include "matriz.h"
+#include "consultas.h"
 
 const int OPC_REGISTRAR = 1;
 const int OPC_MOSTRAR_EQUIPOS = 2;
