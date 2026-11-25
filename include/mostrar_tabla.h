@@ -32,5 +32,30 @@ int contarEmpatados(const Equipo equipos[], int total) {
     return cantidad;
 }
 
+int elegirCampeon(const Equipo equipos[], int empatados) {
+    std::cout << "Hay empate en el primer lugar:\n";
+    for (int i = 0; i < empatados; i++) {
+        std::cout << (i + 1) << ". " << equipos[i].nombre << "\n";
+    }
 
+    int opcion;
+    do {
+        std::cout << "Elige al campeon: ";
+        std::cin >> opcion;
+    } while (opcion < 1 || opcion > empatados);
+
+    return opcion - 1;
+}
+
+void mostrarCampeon(const Equipo equipos[], int total) {
+    int empatados = contarEmpatados(equipos, total);
+    int campeon = 0;
+
+    if (empatados > 1) {
+        campeon = elegirCampeon(equipos, empatados);
+    }
+
+    std::cout << "El campeon es: " << equipos[campeon].nombre
+              << " con " << equipos[campeon].puntos << " puntos\n";
+}
 

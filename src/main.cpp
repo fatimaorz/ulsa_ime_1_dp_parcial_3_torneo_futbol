@@ -12,7 +12,7 @@
 #include "torneo.h"
 #include "utilerias.h"
 #include "matriz.h"
-#include "consultas.h"
+#include "mostrar_tabla.h"
 
 const int OPC_REGISTRAR = 1;
 const int OPC_MOSTRAR_EQUIPOS = 2;
@@ -151,29 +151,6 @@ void mostrarCampeon(const Equipo equipos[]) {
     std::cout << "El campeon es " << equipos[empatados[eleccion - 1]].nombre
               << " con " << maximoPuntos << " puntos.\n";
 }
-
-void consultarEquipo(const Equipo equipos[]) {
-    const std::string nombreBuscado =
-        aMinusculas(leerCadena("Nombre del equipo: "));
-
-    for (int i = 0; i < MAX_EQUIPOS; i++) {
-        if (aMinusculas(equipos[i].nombre) == nombreBuscado) {
-            const Equipo& equipo = equipos[i];
-            std::cout << "\n--- FICHA DE " << equipo.nombre << " ---\n"
-                      << "PJ: " << equipo.jugados
-                      << " | PG: " << equipo.ganados
-                      << " | PE: " << equipo.empatados
-                      << " | PP: " << equipo.perdidos << '\n'
-                      << "GF: " << equipo.golesFavor
-                      << " | GC: " << equipo.golesContra
-                      << " | PTS: " << equipo.puntos << '\n';
-            return;
-        }
-    }
-
-    std::cout << "No se encontro el equipo.\n";
-}
-
    
 
 int main() {
@@ -219,7 +196,7 @@ int main() {
             } else if (opcion == OPC_CAMPEON) {
                 mostrarCampeon(equipos);
             } else if (opcion == OPC_CONSULTAR) {
-                consultarEquipo(equipos);
+                consultarEquipo(equipos, partidos);
             } else if (opcion == OPC_MATRIZ) {
                 mostrarMatriz(equipos, partidos);
                  mostrarMejores(equipos);
