@@ -15,7 +15,7 @@ mi modulo acomoda los equipos en orden de puntos y muestra el ganador, sirve par
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
-[Inserta aquí tu respuesta]
+mi modulo recive los puntos que hizo el equipo en el torneo, que son los resultados de los partidos que la persona agrega y produce la lista de los equipos en orden por mayor a menor puntaje. 
 
 ## 4. Decisiones de diseño
 
