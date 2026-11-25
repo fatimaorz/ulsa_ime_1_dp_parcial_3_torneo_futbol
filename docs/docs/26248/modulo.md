@@ -48,8 +48,10 @@ mostrarCampeon(const Equipo equipos[], int total)	Arreglo constante y total por 
 Los temas son el ordenamiento que se demuestra en "ordenarTabla", intercambio de posiciones que se demuestra con el "intercambiar" y los apuntadores son "Intercambiar" y "ordenarTabla".
 
 **¿Qué ciclos usaste y por qué esos?**
+use for, do y while, porque para for para recorrer arreglos y hacer 3 operaciones en una sola linea de codigo como esto "for (int i = 0; i < total; i++) { ... }" y el do-while para hacer la opción de elegir el campeon así "while (opcion < 1 || opcion > empatados) 
+    std::cout << "Elige al campeon: ";
+    std::cin >> opcion;"
 
-[Inserta aquí tu respuesta]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
