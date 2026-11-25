@@ -78,3 +78,49 @@ inline void mostrarMatriz(
         std::cout << '\n';
     }
 }
+
+
+// 3. Mostrar mejor ataque y mejor defensa
+inline void mostrarMejores(const Equipo equipos[])
+{
+    int maxGolesFavor = equipos[0].golesFavor;
+    int minGolesContra = equipos[0].golesContra;
+
+    // Buscar el maximo de goles a favor y el minimo de goles en contra
+    for (int i = 1; i < MAX_EQUIPOS; i++)
+    {
+        if (equipos[i].golesFavor > maxGolesFavor)
+        {
+            maxGolesFavor = equipos[i].golesFavor;
+        }
+
+        if (equipos[i].golesContra < minGolesContra)
+        {
+            minGolesContra = equipos[i].golesContra;
+        }
+    }
+
+    // Mostrar todos los equipos empatados en mejor ataque
+    std::cout << "\n--- MEJOR ATAQUE ---\n";
+    std::cout << "Goles a favor: " << maxGolesFavor << '\n';
+
+    for (int i = 0; i < MAX_EQUIPOS; i++)
+    {
+        if (equipos[i].golesFavor == maxGolesFavor)
+        {
+            std::cout << "- " << equipos[i].nombre << '\n';
+        }
+    }
+
+    // Mostrar todos los equipos empatados en mejor defensa
+    std::cout << "\n--- MEJOR DEFENSA ---\n";
+    std::cout << "Goles en contra: " << minGolesContra << '\n';
+
+    for (int i = 0; i < MAX_EQUIPOS; i++)
+    {
+        if (equipos[i].golesContra == minGolesContra)
+        {
+            std::cout << "- " << equipos[i].nombre << '\n';
+        }
+    }
+}
