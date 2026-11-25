@@ -6,7 +6,7 @@
 
 | Módulo | Matrícula | Nombre | Usuario de GitHub | Tema |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Registro de equipos |
+| 1 | [26081] | [Fatima Marisol Orozco Castro] | [fatimaorz] | Registro de equipos |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Simulación de partidos |
 | 3 | 26113 | Andrés Galindo Dávila | andresgalindod-rgb | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
@@ -19,7 +19,18 @@
 
 Escriban las opciones del menú en el orden en que aparecen en el programa.
 
-[Inserta aquí tu respuesta]
+
+--- TORNEO DE FUTBOL DE MERMELADA CODE ---
+1. Registrar equipo
+2. Mostrar equipos
+3. Simular torneo
+4. Mostrar resultados
+5. Mostrar tabla de posiciones
+6. Mostrar campeon
+7. Consultar equipo
+8. Mostrar matriz de enfrentamientos
+9. Salir
+Opcion:
 
 ## 3. Cómo compilar y ejecutar
 
@@ -123,7 +134,75 @@ Antes de consultar los demás reportes de esa corrida, calculen a mano los resul
 Receta en pseudocódigo del programa principal: el menú y cómo se conecta con cada módulo.
 
 ```
-[Inserta aquí tu respuesta]
+CONSTANTES
+    OPC_REGISTRAR = 1 ... OPC_SALIR = 9
+    MODO_ALEATORIO = 1, MODO_PRUEBA = 2
+
+FUNCION mostrarMenu()
+    1. Mostrar el titulo del torneo
+    2. Mostrar las 9 opciones numeradas
+
+FUNCION simularPartidos(partidos, modo)
+    RECIBE: partidos (arreglo, se modifica), modo (entero, por valor)
+    1. indicePartido = 0
+    2. Para cada local de 0 hasta MAX_EQUIPOS - 1:
+          3. Para cada visitante de local + 1 hasta MAX_EQUIPOS - 1:
+                4. Guardar local y visitante en partidos[indicePartido]
+                5. Si modo es MODO_PRUEBA:
+                      tomar los goles de GOLES_PRUEBA[indicePartido]
+                   Si no:
+                      goles de cada lado = numeroAleatorio()
+                6. Aumentar indicePartido en 1
+
+FUNCION mostrarResultados(equipos, partidos)
+    1. Mostrar el titulo
+    2. Para cada partido de 0 hasta TOTAL_PARTIDOS - 1:
+          3. Mostrar local, marcador y visitante
+
+FUNCION mostrarTabla(equipos)
+    1. Copiar equipos en el arreglo ordenados
+    2. Ordenar ordenados de mayor a menor por puntos (burbuja)
+    3. Mostrar titulo y encabezados
+    4. Para cada posicion de 0 hasta MAX_EQUIPOS - 1:
+          5. Mostrar posicion, nombre y estadisticas
+
+FUNCION mostrarCampeon(equipos)
+    1. Buscar el maximo de puntos
+    2. Guardar en empatados los indices con ese maximo
+    3. Si solo hay uno: mostrar campeon y puntos, terminar
+    4. Mostrar los empatados numerados desde 1
+    5. Pedir eleccion con leerEntero
+    6. Mientras eleccion sea menor que 1 o mayor que cantidadEmpatados:
+          mostrar rechazo y volver a pedir
+    7. Mostrar el campeon elegido y sus puntos
+
+PROGRAMA PRINCIPAL main
+    1. Declarar equipos, partidos, cantidad = 0, simulado = falso
+    2. Repetir:
+          3. Mostrar menu y leer opcion con leerEntero
+          4. Si opcion es REGISTRAR:
+                registrarEquipo(equipos, cantidad)
+          5. Si no, si opcion es MOSTRAR_EQUIPOS:
+                mostrarEquipos(equipos, cantidad)
+          6. Si no, si opcion es SIMULAR:
+                a. Si cantidad < MAX_EQUIPOS: rechazar (faltan equipos)
+                b. Si no, si simulado: rechazar (ya se simulo)
+                c. Si no:
+                      pedir modo hasta que sea MODO_ALEATORIO o MODO_PRUEBA
+                      simularPartidos(partidos, modo)
+                      calcularTabla(equipos, MAX_EQUIPOS, partidos, TOTAL_PARTIDOS)
+                      simulado = verdadero
+          7. Si no, si opcion esta entre RESULTADOS y MATRIZ:
+                a. Si NO simulado: rechazar ("Primero debes simular")
+                b. Si no, segun la opcion:
+                      RESULTADOS: mostrarResultados
+                      TABLA: mostrarTabla
+                      CAMPEON: mostrarCampeon
+                      CONSULTAR: consultarEquipo
+                      MATRIZ: mostrarMatriz y mostrarMejores
+          8. Si no, si opcion es SALIR: mostrar despedida
+          9. Si no: mostrar "Opcion no valida" y volver al menu
+       hasta que opcion sea OPC_SALIR
 ```
 
 ## 9. Documentación individual
@@ -145,4 +224,4 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 
 Si cambiaron una constante de `include/torneo.h`, expliquen qué cambiaron y por qué. Si no cambiaron nada, escriban "Sin cambios".
 
-[Inserta aquí tu respuesta]
+Sin cambios
