@@ -7,7 +7,7 @@
 #include "torneo.h"
 #include "utilerias.h"
 #include "registros.h"
-#include "matriz.h"
+
 
 
 using namespace std;
