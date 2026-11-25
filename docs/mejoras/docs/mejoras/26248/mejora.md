@@ -11,7 +11,12 @@ beneficia creo que a el organizador del torneo y a los equipos, al organizador p
 
 ¿Qué partes de la solución cambian (registros, arreglos, constantes, funciones, menú)? Justifica cada cambio.
 
-
+No cambiaria registros, arreglos ni constantes solo agregaría unas funciones como para comparar los equipos o tener la diferencia de los goles para que se pueda escoger un ganador con esas dos reglas.
+ordenarTabla: en vez de comparar solo los puntos, usa compararEquipos. La tabla mostrada también queda con el desempate aplicado.
+contarEmpatados: ahora cuenta como empatado solo al equipo que sigue igual al líder en todos los criterios. Si da 1, el campeón sale solo.
+mostrarCampeon: avisa cuando el campeón se decidió por desempate automático.
+elegirCampeon: se conserva. Solo se usa si el empate persiste en todos los criterios.
+Menú: no cambia. La opción 6 sigue siendo "Mostrar campeón", solo que ahora pregunta menos veces.
 
 ## 3. Receta
 
