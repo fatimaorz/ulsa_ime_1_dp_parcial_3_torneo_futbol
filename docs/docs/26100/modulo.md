@@ -44,7 +44,7 @@ nullptr para cuando no se encuentre un equipo, regresa
 
 **¿Qué ciclos usaste y por qué esos?**
 
-for, if, if else, else 
+Use for, uno en buscarEquipo para recorrer los equipos y encontrar el nombre, y otro en consultarEquipo para recorrer los 15 partidos y armar la tabla de rivales. Uso for porque sé cuántas vueltas hay (MAX_EQUIPOS y TOTAL_PARTIDOS)
 
 **¿Qué constantes usaste y por qué son constantes?**
 
