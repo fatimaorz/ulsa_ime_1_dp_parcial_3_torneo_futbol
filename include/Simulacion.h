@@ -73,3 +73,18 @@ inline void mostrarResultados(const Equipo equipos[], const Partido partidos[], 
         std::cout << "Primero simula el torneo.\n";
         return;
     }
+
+    std::cout << "\n--- RESULTADOS DE LOS PARTIDOS ---\n";
+    std::cout << std::left << std::setw(ANCHO_NUM) << "#"
+              << std::setw(ANCHO_EQUIPO) << "LOCAL"
+              << std::setw(ANCHO_MARCADOR) << "MARCADOR"
+              << std::setw(ANCHO_EQUIPO) << "VISITANTE" << "\n";
+    for (int k = 0; k < totalPartidos; k++) {
+        std::string marcador = std::to_string(partidos[k].golesLocal) + " - "
+                             + std::to_string(partidos[k].golesVisitante);
+        std::cout << std::left << std::setw(ANCHO_NUM) << k + 1
+                  << std::setw(ANCHO_EQUIPO) << equipos[partidos[k].local].nombre
+                  << std::setw(ANCHO_MARCADOR) << marcador
+                  << std::setw(ANCHO_EQUIPO) << equipos[partidos[k].visitante].nombre << "\n";
+    }
+}
