@@ -51,3 +51,40 @@ inline bool pedirModoSimulacion() {
     }
 }
 
+inline void simularPartidos(int totalEquipos, Partido partidos[], int& totalPartidos) {
+    if (totalEquipos < MAX_EQUIPOS) {
+        std::cout << "Faltan equipos para simular el torneo.\n";
+        return;
+    }
+    if (totalPartidos > 0) {
+        std::cout << "El torneo ya fue simulado.\n";
+        return;
+    }
+    bool modoPrueba = pedirModoSimulacion();
+    generarPartidos(partidos, totalEquipos);
+    totalPartidos = TOTAL_PARTIDOS;
+    asignarMarcadores(partidos, totalPartidos, modoPrueba);
+    std::cout << "Torneo simulado correctamente.\n";
+}
+
+
+inline void mostrarResultados(const Equipo equipos[], const Partido partidos[], int totalPartidos) {
+    if (totalPartidos == 0) {
+        std::cout << "Primero simula el torneo.\n";
+        return;
+    }
+
+    std::cout << "\n--- RESULTADOS DE LOS PARTIDOS ---\n";
+    std::cout << std::left << std::setw(ANCHO_NUM) << "#"
+              << std::setw(ANCHO_EQUIPO) << "LOCAL"
+              << std::setw(ANCHO_MARCADOR) << "MARCADOR"
+              << std::setw(ANCHO_EQUIPO) << "VISITANTE" << "\n";
+    for (int k = 0; k < totalPartidos; k++) {
+        std::string marcador = std::to_string(partidos[k].golesLocal) + " - "
+                             + std::to_string(partidos[k].golesVisitante);
+        std::cout << std::left << std::setw(ANCHO_NUM) << k + 1
+                  << std::setw(ANCHO_EQUIPO) << equipos[partidos[k].local].nombre
+                  << std::setw(ANCHO_MARCADOR) << marcador
+                  << std::setw(ANCHO_EQUIPO) << equipos[partidos[k].visitante].nombre << "\n";
+    }
+}
