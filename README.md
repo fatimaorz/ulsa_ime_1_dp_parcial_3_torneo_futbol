@@ -93,8 +93,6 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 
 | # | Nombre | Abreviatura |
 | --- | --- | --- |
-| # | Nombre | Abreviatura |
-| --- | --- | --- |
 | 1 | Aguilas | AGU |
 | 2 | Halcones | HAL |
 | 3 | Jaguares | JAG |
