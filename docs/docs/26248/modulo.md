@@ -58,7 +58,7 @@ use for, do y while, porque para for para recorrer arreglos y hacer 3 operacione
 mi modulo no declara en si constantes sino que las toma de los otros archivos .h como MAX_EQUIPOS de torneo.h
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+utilice torneo.h, tabla.h y utelerias.h
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
