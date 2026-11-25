@@ -2,14 +2,14 @@
 
 **Nombre:** Diego Serrano Martínez  
 **Matrícula:** 26248 
-**Módulo:** [Inserta aquí tu respuesta]  
-**Archivo de código:** [Inserta aquí tu respuesta]
+**Módulo:** modulo 4 
+**Archivo de código:** mostrar_tabla.h
 
 ## 2. Propósito
 
 ¿Qué hace tu módulo y para qué le sirve a quien usa el programa?
 
-[Inserta aquí tu respuesta]
+mi modulo acomoda los equipos en orden de puntos y muestra el ganador, sirve para mostrar el equipo en orden y no tener que buscar en una lista desordenada el ganador, también permite ver si hay empates y elegir cual equipo ganaría.
 
 ## 3. Entradas y salidas
 
