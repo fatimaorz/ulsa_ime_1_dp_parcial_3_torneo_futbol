@@ -31,8 +31,17 @@ mostrarCampeon(const Equipo equipos[], int total): anuncia el campeon con sus pu
 
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
+Registro (Equipo): agrupa todos los datos de un equipo (nombre, jugados, ganados, puntos, etc.). lo elegí porque así un equipo se mueve completo y no quedan datos sueltos. Por eso, al intercambiar dos equipos, el nombre y las estadísticas se van juntos.
+Arreglo de Equipo: guarda los 6 equipos en orden. lo elegí porque permite recorrerlos con un ciclo, compararlos por posición y reacomodarlos al ordenar.
+Apuntadores (Equipo*): se usan en intercambiar, y en ordenarTabla para recorrer el arreglo (actual y siguiente). Se eligieron porque el módulo lo pide y porque con la dirección de los equipos se modifican los equipos reales, no copias.
+LOS DATOS SE PASAN:
+intercambiar(Equipo* a, Equipo* b)	Con apuntadores: recibe las direcciones de los dos equipos y los modifica directamente.
+ordenarTabla(Equipo equipos[], int total)	Como arreglo (sin const, porque lo modifica) y total por valor.
+mostrarTabla(const Equipo equipos[], int total)	Como arreglo constante (solo lectura) y total por valor.
+contarEmpatados(const Equipo equipos[], int total)	Arreglo constante y total por valor. Devuelve un int.
+elegirCampeon(const Equipo equipos[], int empatados)	Arreglo constante y empatados por valor. Devuelve la posición elegida.
+mostrarCampeon(const Equipo equipos[], int total)	Arreglo constante y total por valor.
 
-[Inserta aquí tu respuesta]
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
