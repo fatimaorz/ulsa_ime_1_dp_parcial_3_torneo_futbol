@@ -69,12 +69,79 @@ Mi módulo rechaza una opción de campeón fuera de rango y muestra 'Opcion no v
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+MODULO 4: CLASIFICACION Y CAMPEON
+
+INTERCAMBIAR(a, b)          // a y b son apuntadores a Equipo
+    guardar en temporal el equipo al que apunta a
+    copiar en a el equipo al que apunta b
+    copiar en b el equipo guardado en temporal
+
+ORDENAR_TABLA(equipos, total)
+    PARA i DESDE 0 HASTA total - 2
+        actual = apuntador al primer equipo
+        MIENTRAS actual esté antes de la posición (total - 1 - i)
+            siguiente = apuntador al equipo que está después de actual
+            SI puntos de actual < puntos de siguiente
+                INTERCAMBIAR(actual, siguiente)
+            FIN SI
+            avanzar actual al siguiente equipo
+        FIN MIENTRAS
+    FIN PARA
+
+MOSTRAR_TABLA(equipos, total)
+    imprimir título y encabezados (#, EQUIPO, PJ, PG, PE, PP, GF, GC, PTS)
+    PARA i DESDE 0 HASTA total - 1
+        imprimir i + 1, nombre y estadísticas del equipo i
+    FIN PARA
+
+CONTAR_EMPATADOS(equipos, total)
+    cantidad = 0
+    PARA i DESDE 0 HASTA total - 1
+        SI puntos del equipo i == puntos del equipo 0
+            cantidad = cantidad + 1
+        FIN SI
+    FIN PARA
+    DEVOLVER cantidad
+
+ELEGIR_CAMPEON(equipos, empatados)
+    imprimir "Hay empate en el primer lugar"
+    PARA i DESDE 0 HASTA empatados - 1
+        imprimir i + 1 y el nombre del equipo i
+    FIN PARA
+    REPETIR
+        pedir opcion al usuario
+        SI opcion < 1 O opcion > empatados
+            imprimir "Opcion no valida"
+        FIN SI
+    HASTA QUE opcion esté entre 1 y empatados
+    DEVOLVER opcion - 1
+
+MOSTRAR_CAMPEON(equipos, total)
+    SI total <= 0
+        imprimir "No hay equipos para determinar un campeon"
+        TERMINAR
+    FIN SI
+    empatados = CONTAR_EMPATADOS(equipos, total)
+    campeon = 0
+    SI empatados > 1
+        campeon = ELEGIR_CAMPEON(equipos, empatados)
+    FIN SI
+    imprimir nombre y puntos del equipo en la posición campeon
+
+FLUJO EN EL PROGRAMA PRINCIPAL (opciones 5 y 6)
+    SI el torneo no se ha simulado
+        imprimir "Primero debes simular el torneo"
+    SINO
+        copiar los equipos a un arreglo ordenados
+        ORDENAR_TABLA(ordenados, MAX_EQUIPOS)
+        SI opcion es la tabla: MOSTRAR_TABLA(ordenados, MAX_EQUIPOS)
+        SI opcion es el campeon: MOSTRAR_CAMPEON(ordenados, MAX_EQUIPOS)
+    FIN SI
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+No la probe a mano
 
 ## 6. Pruebas
 
