@@ -7,7 +7,7 @@
 | Módulo | Matrícula | Nombre | Usuario de GitHub | Tema |
 | --- | --- | --- | --- | --- |
 | 1 | [26081] | [Fatima Marisol Orozco Castro] | [fatimaorz] | Registro de equipos |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Simulación de partidos |
+| 2 | [26166] | [Roberto Emiliano Velazquez Ibarra] | [robertovelazquez-ui] | Simulación de partidos |
 | 3 | 26113 | Andrés Galindo Dávila | andresgalindod-rgb | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
 | 5 | 26100 | Regina Murillo Arellano | reginamurilloa | Consultas |
