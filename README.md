@@ -105,7 +105,21 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 Ejecuten una corrida en modo aleatorio y copien aquí sus 15 resultados.
 
 ```
-[Inserta aquí tu respuesta]
+1   Aguilas          0 - 2     Halcones
+2   Aguilas          3 - 2     Jaguares
+3   Aguilas          3 - 5     Leones
+4   Aguilas          0 - 2     Pumas
+5   Aguilas          2 - 2     Tigres
+6   Halcones         4 - 2     Jaguares
+7   Halcones         1 - 3     Leones
+8   Halcones         2 - 5     Pumas
+9   Halcones         1 - 1     Tigres
+10  Jaguares         2 - 2     Leones
+11  Jaguares         0 - 5     Pumas
+12  Jaguares         5 - 0     Tigres
+13  Leones           0 - 0     Pumas
+14  Leones           4 - 2     Tigres
+15  Pumas            4 - 5     Tigres
 ```
 
 Antes de consultar los demás reportes de esa corrida, calculen a mano los resultados.
@@ -114,20 +128,20 @@ Antes de consultar los demás reportes de esa corrida, calculen a mano los resul
 
 | Equipo | PJ | PG | PE | PP | GF | GC | PTS |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| Leones | 5 | 3 | 2 | 0 | 14 | 8 | 11 |
+| Pumas | 5 | 3 | 1 | 1 | 16 | 7 | 10 |
+| Halcones | 5 | 2 | 1 | 2 | 10 | 11 | 7 |
+| Tigres | 5 | 1 | 2 | 2 | 10 | 16 | 5 |
+| Aguilas | 5 | 1 | 1 | 3 | 8 | 13 | 4 |
+| Jaguares | 5 | 1 | 1 | 3 | 11 | 14 | 4 |
 
-**Campeón o equipos empatados en el primer lugar:** [Inserta aquí tu respuesta]  
-**Mejor ataque:** [Inserta aquí tu respuesta]  
-**Mejor defensa:** [Inserta aquí tu respuesta]
+**Campeón o equipos empatados en el primer lugar:** Leones  
+**Mejor ataque:** Pumas (16 goles a favor)  
+**Mejor defensa:** Pumas (7 goles en contra)
 
 **¿La salida del programa coincidió con el cálculo a mano? Si no, ¿qué corrigieron?**
 
-[Inserta aquí tu respuesta]
+Si, los 15 resultados, la tabla de posiciones, el campeón, el mejor ataque y la mejor defensa coinciden con los datos de la matriz proporcionada. No fue necesario corregir cálculos.
 
 ## 8. Receta del menú
 
