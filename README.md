@@ -93,12 +93,14 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 
 | # | Nombre | Abreviatura |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 6 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| # | Nombre | Abreviatura |
+| --- | --- | --- |
+| 1 | Aguilas | AGU |
+| 2 | Halcones | HAL |
+| 3 | Jaguares | JAG |
+| 4 | Leones | LEO |
+| 5 | Pumas | PUM |
+| 6 | Tigres | TIG |
 
 ## 7. Cálculo a mano
 
@@ -212,7 +214,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | Módulo | Documentación | Propuesta de mejora |
 | --- | --- | --- |
 | 1 | [docs/docs/26081/modulo.md](docs/docs/26081/modulo.md) | [docs/mejoras/docs/mejoras/26081/mejora.md](docs/mejoras/docs/mejoras/26081/mejora.md) |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 2 | [docs/docs/26166/modulo.md] | [docs/mejoras/docs/mejoras/26166/mejora.md] |
 | 3 | [docs/docs/26113/modulo.md] | [docs/mejoras/docs/mejoras/26113/mejora.md] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 5 | [docs/docs/26100/modulo.md] | [docs/mejoras/docs/mejoras/26100/mejora.md] |
