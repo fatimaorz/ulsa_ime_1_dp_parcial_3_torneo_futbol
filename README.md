@@ -211,7 +211,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 
 | Módulo | Documentación | Propuesta de mejora |
 | --- | --- | --- |
-| 1 | [docs/docs/26081/modulo.md] | [docs/docs/26081/modulo.md] |
+| 1 | (docs/docs/26081/modulo.md) | (docs/mejoras/docs/mejoras/26081/mejora.md) |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [docs/docs/26113/modulo.md] | [docs/mejoras/docs/mejoras/26113/mejora.md] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
