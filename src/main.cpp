@@ -221,6 +221,7 @@ int main() {
                 consultarEquipo(equipos);
             } else if (opcion == OPC_MATRIZ) {
                 mostrarMatriz(equipos, partidos);
+                 mostrarMejores(equipos);
             }
         } else if (opcion == OPC_SALIR) {
             std::cout << "Hasta luego.\n";
