@@ -27,7 +27,8 @@ const int MODO_ALEATORIO = 1;
 const int MODO_PRUEBA = 2;
 
 void mostrarMenu() {
-    std::cout << "\n1. Registrar equipo\n"
+    std::cout << "\n--- TORNEO DE FUTBOL DE MERMELADA CODE ---\n"
+              << "1. Registrar equipo\n"
               << "2. Mostrar equipos\n"
               << "3. Simular torneo\n"
               << "4. Mostrar resultados\n"
