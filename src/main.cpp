@@ -12,6 +12,8 @@
 #include "torneo.h"
 #include "utilerias.h"
 #include "matriz.h"
+#include "mostrar_tabla.h"
+#include "consultas.h"
 
 const int OPC_REGISTRAR = 1;
 const int OPC_MOSTRAR_EQUIPOS = 2;
@@ -27,7 +29,8 @@ const int MODO_ALEATORIO = 1;
 const int MODO_PRUEBA = 2;
 
 void mostrarMenu() {
-    std::cout << "\n1. Registrar equipo\n"
+    std::cout << "\n--- TORNEO DE FUTBOL DE MERMELADA CODE ---\n"
+              << "1. Registrar equipo\n"
               << "2. Mostrar equipos\n"
               << "3. Simular torneo\n"
               << "4. Mostrar resultados\n"
@@ -149,28 +152,7 @@ void mostrarCampeon(const Equipo equipos[]) {
     std::cout << "El campeon es " << equipos[empatados[eleccion - 1]].nombre
               << " con " << maximoPuntos << " puntos.\n";
 }
-
-void consultarEquipo(const Equipo equipos[]) {
-    const std::string nombreBuscado =
-        aMinusculas(leerCadena("Nombre del equipo: "));
-
-    for (int i = 0; i < MAX_EQUIPOS; i++) {
-        if (aMinusculas(equipos[i].nombre) == nombreBuscado) {
-            const Equipo& equipo = equipos[i];
-            std::cout << "\n--- FICHA DE " << equipo.nombre << " ---\n"
-                      << "PJ: " << equipo.jugados
-                      << " | PG: " << equipo.ganados
-                      << " | PE: " << equipo.empatados
-                      << " | PP: " << equipo.perdidos << '\n'
-                      << "GF: " << equipo.golesFavor
-                      << " | GC: " << equipo.golesContra
-                      << " | PTS: " << equipo.puntos << '\n';
-            return;
-        }
-    }
-
-    std::cout << "No se encontro el equipo.\n";
-}
+   
 
 int main() {
     Equipo equipos[MAX_EQUIPOS];
@@ -215,9 +197,10 @@ int main() {
             } else if (opcion == OPC_CAMPEON) {
                 mostrarCampeon(equipos);
             } else if (opcion == OPC_CONSULTAR) {
-                consultarEquipo(equipos);
+                consultarEquipo(equipos, partidos);
             } else if (opcion == OPC_MATRIZ) {
                 mostrarMatriz(equipos, partidos);
+                 mostrarMejores(equipos);
             }
         } else if (opcion == OPC_SALIR) {
             std::cout << "Hasta luego.\n";
