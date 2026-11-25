@@ -182,4 +182,4 @@ Que de mis errores de programacion se puede aprender, no necesito que me salga d
 
 **¿Qué cambiarías de tu proceso?**
 
-Nada, me gusto que pude iniciar por mi cuenta pero tambien obtuve ayuda de la ia sobre que tipos de cambios debia hacer haci como tambien ayudarme a entenedr el por que era mejor realizarlo de otras maneras.
+Nada, me gusto que pude iniciar por mi cuenta pero tambien obtuve ayuda de la ia sobre que tipos de cambios debia hacer asi como tambien ayudarme a entenedr el por que era mejor realizarlo de otras maneras.
