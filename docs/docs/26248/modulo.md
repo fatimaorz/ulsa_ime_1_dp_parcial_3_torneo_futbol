@@ -55,8 +55,7 @@ use for, do y while, porque para for para recorrer arreglos y hacer 3 operacione
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
-
+mi modulo no declara en si constantes sino que las toma de los otros archivos .h como MAX_EQUIPOS de torneo.h
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
 [Inserta aquí tu respuesta]
