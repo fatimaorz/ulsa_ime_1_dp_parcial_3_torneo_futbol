@@ -11,7 +11,7 @@
 | 3 | 26113 | Andrés Galindo Dávila | andresgalindod-rgb | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
 | 5 | [Inserta aquí tu respuesta] | 26100 | Regina Murillo Arellano | Consultas |
-| 6 | [26167] | [Daniel Miranda Ferreira] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
+| 6 | [26167] | [Daniel Miranda Ferreira] | [Dan-Byte0] | Matriz de enfrentamientos |
 
 > **Nota:** en los equipos de 5 integrantes, todos contribuyen al módulo 6. En esa fila escriban "Todo el equipo".
 
