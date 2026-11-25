@@ -22,3 +22,5 @@ void ordenarTabla(Equipo equipos[], int total) {
     }
 }
 
+
+
