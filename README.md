@@ -7,7 +7,7 @@
 | Módulo | Matrícula | Nombre | Usuario de GitHub | Tema |
 | --- | --- | --- | --- | --- |
 | 1 | [26081] | [Fatima Marisol Orozco Castro] | [fatimaorz] | Registro de equipos |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Simulación de partidos |
+| 2 | [26166] | [Roberto Emiliano Velazquez Ibarra] | [robertovelazquez-ui] | Simulación de partidos |
 | 3 | 26113 | Andrés Galindo Dávila | andresgalindod-rgb | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
 | 5 | 26100 | Regina Murillo Arellano | reginamurilloa | Consultas |
@@ -215,7 +215,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [docs/docs/26113/modulo.md] | [docs/mejoras/docs/mejoras/26113/mejora.md] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 5 | [docs/docs/26100/modulo.md] | [docs/mejoras/docs/mejoras/26100/mejora.md] |
 | 6 | [docs/docs/26167/modulo.md] | [docs/docs/26167/modulo.md] |
 
 <!-- Si el equipo es de seis integrantes, agreguen una fila para el módulo 6. En equipos de cinco, agreguen una fila con el enlace a docs/modulo_6/modulo.md, sin propuesta de mejora. -->
