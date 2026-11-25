@@ -46,6 +46,8 @@ do {
                   << empatados << ".\n";
     }
 } while (opcion < 1 || opcion > empatados);
+
+return opcion - 1;
 }
 
 void mostrarCampeon(const Equipo equipos[], int total) {
@@ -59,4 +61,3 @@ void mostrarCampeon(const Equipo equipos[], int total) {
     std::cout << "El campeon es: " << equipos[campeon].nombre
               << " con " << equipos[campeon].puntos << " puntos\n";
 }
-
